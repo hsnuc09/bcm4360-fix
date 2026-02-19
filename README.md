@@ -29,10 +29,19 @@ lspci -nn | grep -i network
 
 Install the fixed driver version `6.30.223.271-23ubuntu1.2` from the `noble-proposed` repository.
 
+**No third-party software required** - uses only official Ubuntu packages and built-in tools.
+
 ### Quick Fix (Automated)
 
 ```bash
-# Run the installation script
+# Clone the repository
+git clone https://github.com/hsnuc09/bcm4360-fix.git
+cd bcm4360-fix
+
+# Test first (dry run - shows what would happen without making changes)
+sudo bash install-fix.sh --dry-run
+
+# Install for real
 sudo bash install-fix.sh
 ```
 
