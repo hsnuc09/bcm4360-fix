@@ -151,9 +151,31 @@ The fixed version (`...ubuntu1.2`) includes patches for kernel 6.17+ compatibili
 | **Bluetooth** | ⚠️ May need firmware | Broadcom - usually works |
 | **Audio** | ⚠️ May need tweaks | Cirrus Logic - see ArchWiki |
 | **Trackpad** | ✅ Works out of box | Apple SPI - basic gestures |
-| **Camera** | ⚠️ Limited support | FaceTime HD - driver in development |
+| **Camera** | ⚠️ Needs PPA | FaceTime HD - see below |
 
 **Good news:** Only WiFi requires manual intervention. Everything else works with the default Ubuntu 24.04 installation!
+
+### Enabling the FaceTime HD Camera
+
+The camera also needs a driver fix. Install from PPA:
+
+```bash
+# Add the facetimehd PPA
+sudo add-apt-repository -y ppa:greg-whiteley/facetimehd
+sudo apt-get update
+
+# Install driver and firmware
+sudo apt-get install -y facetimehd-dkms facetimehd-firmware
+
+# Load the module
+sudo modprobe facetimehd
+
+# Verify camera is detected
+v4l2-ctl --list-devices
+# Should show: Apple Facetime HD at /dev/video0
+```
+
+The camera will now work in Chrome, Zoom, and most Linux video apps!
 
 ## License
 
