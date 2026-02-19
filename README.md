@@ -160,6 +160,19 @@ The fixed version (`...ubuntu1.2`) includes patches for kernel 6.17+ compatibili
 The camera also needs a driver fix. Install from PPA:
 
 ```bash
+# Clone the repository (if you haven't already)
+git clone https://github.com/hsnuc09/bcm4360-fix.git
+cd bcm4360-fix
+
+# Test first (dry run - shows what would happen without making changes)
+sudo bash install-camera-fix.sh --dry-run
+
+# Install for real
+sudo bash install-camera-fix.sh
+```
+
+**Manual installation:**
+```bash
 # Add the facetimehd PPA
 sudo add-apt-repository -y ppa:greg-whiteley/facetimehd
 sudo apt-get update
