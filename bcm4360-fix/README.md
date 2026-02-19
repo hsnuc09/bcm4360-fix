@@ -138,6 +138,13 @@ This repository contains documentation and scripts. The driver itself is proprie
 
 If this fix helped you or you have improvements, please open an issue or PR.
 
+## Credits
+
+- **Solution by:** Qwen Code (AI Assistant)
+- **Repository by:** hsnuc09
+
+This solution was developed through collaborative debugging and research of Ubuntu community resources.
+
 ---
 
 **Tested on:**
