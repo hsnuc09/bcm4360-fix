@@ -139,6 +139,22 @@ The fixed version (`...ubuntu1.2`) includes patches for kernel 6.17+ compatibili
 - [Ubuntu Discourse: BCM4360 driver works on 25.10 but not on 24.04.3 LTS](https://discourse.ubuntu.com/t/bcm4360-driver-works-on-25-10-but-not-on-24-04-3-lts/76543)
 - [ArchWiki: Broadcom wireless](https://wiki.archlinux.org/title/Broadcom_wireless)
 
+## MacBook Pro (2013-2015) Hardware Compatibility
+
+| Component | Status on Ubuntu 24.04 | Notes |
+|-----------|----------------------|-------|
+| **WiFi** | ⚠️ Needs fix | BCM4360 - use this repo |
+| **Graphics** | ✅ Works out of box | Intel Iris Pro P5200 (i915 driver) |
+| **Display** | ✅ Works out of box | Retina 2880x1800 native resolution |
+| **3D Acceleration** | ✅ Works out of box | Mesa 25.2.8, OpenGL 4.6 |
+| **Ethernet** | ✅ Works out of box | Broadcom BCM57786 |
+| **Bluetooth** | ⚠️ May need firmware | Broadcom - usually works |
+| **Audio** | ⚠️ May need tweaks | Cirrus Logic - see ArchWiki |
+| **Trackpad** | ✅ Works out of box | Apple SPI - basic gestures |
+| **Camera** | ⚠️ Limited support | FaceTime HD - driver in development |
+
+**Good news:** Only WiFi requires manual intervention. Everything else works with the default Ubuntu 24.04 installation!
+
 ## License
 
 This repository contains documentation and scripts. The driver itself is proprietary Broadcom software.
