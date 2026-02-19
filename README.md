@@ -31,7 +31,23 @@ Install the fixed driver version `6.30.223.271-23ubuntu1.2` from the `noble-prop
 
 **No third-party software required** - uses only official Ubuntu packages and built-in tools.
 
-### Quick Fix (Automated)
+### Complete Fix (WiFi + Camera)
+
+```bash
+# Clone the repository
+git clone https://github.com/hsnuc09/bcm4360-fix.git
+cd bcm4360-fix
+
+# Test first (dry run - shows what would happen)
+sudo bash install-all-fixes.sh --dry-run
+
+# Install both WiFi and Camera fixes
+sudo bash install-all-fixes.sh
+```
+
+### Individual Fixes
+
+#### WiFi Fix
 
 ```bash
 # Clone the repository
